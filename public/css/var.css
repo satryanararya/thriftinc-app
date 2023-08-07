@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Rubik:wght@300;400;500;600&display=swap');
+
+/*
+FONTS :
+- Poppins : 30, 400, 600, 700, 800
+- Rubik : 300, 400, 500, 600
+*/
+
+/* CSS RESET */
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #794afa;
+    --secondary-dark-color: #453c5c;
+
+    --white-color: #fff;
+    --light-bg-color: #f2f3f5;
+    --light-text-color: #7c899a;
+    --border-color: #e5e8ec;
+    --dark-color: #0a021c;
+
+    --font-small: 13px;
+    --font-smaller: 11px;
+
+    --percent100: 100%;
+    --percent50: 50%;
+
+    --fw3: 300;
+    --fw5: 500;
+    --fw6: 600;
+    --fw7: 700;
+    --fw8: 800;
+
+    --trans-background-color: background-color .3s, color .3s;
+    --trans-background: background-color .3s;
+    --trans-color: color .3s
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+.pagination {
+    display: flex;
+    justify-content:center;
+    margin: 0.5em 0 2em 0;
+    gap: 2em;
+}
+
+.pagination a {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    /* -webkit-tap-highlight-color: transparent; */
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+strong {
+    font-weight: var(--fw8);
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input::placeholder {
+    font: inherit;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins';
+}
+
+h1 {
+    font-size: calc(1.3em + 1vw);
+    font-weight: var(--fw8);
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: var(--fw6);
+}
+
+/* Star */
+.four-point-star::after,
+.four-point-star::before {
+    position: absolute;
+    content: "\2726";
+    font-size: 5rem;
+    padding: 0.15em;
+}
+
+.four-point-star::after { /* The foreground star */
+    background: linear-gradient(135deg, rgba(255,191,183,1) 20%, rgba(243,44,117,1) 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* background-clip: text; */
+}
+
+
+
+/* REUSABLE SELECTOR */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 0.938em;
+}
+
+.column {
+    margin-left: -0.938em;
+    margin-right: -0.938em;
+}
+
+.column .row {
+    padding: 0 0.938em;
+}
+
+.flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexitem {
+    display: flex;
+    align-items: center;
+}
+
+.flexcol {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.main-text {
+    font-size:1em;
+}
+
+.mini-text {
+    font-size: 0.8em;
+    color: var(--light-text-color);
+}
+
+.main-links a:hover {
+    color: var(--primary-color);
+}
+
+.second-links a:hover {
+    color: var(--light-text-color);
+}
+
+.icon-small, .icon-large {
+    display: flex;
+    align-items: center;
+    padding: 0 0.25em;
+    font-weight: normal;
+}
+
+.icon-small {
+    font-size: 1.25em;
+}
+
+.icon-large {
+    font-size: 1.75em;
+    padding: 0 0.75em 0 0;
+}
+
+.mobile-hide {
+    display: none;
+}
+
+.primary-button, .secondary-button, .light-button {
+    font-size: var(--font-small);
+    height: auto;
+    width: fit-content;
+    border-radius: 2em;
+    transform: var(--trans-background-color);
+    padding: 1em 2em;
+    color: var(--white-color);
+}
+
+.primary-button {
+    background-color: var(--primary-color);
+}
+.secondary-button {
+    background-color: var(--secondary-dark-color);
+}
+
+.object-cover img {
+    position: absolute;
+    object-fit: cover;
+    width: var(--percent100);
+    height: var(--percent100);
+    display: block;
+}
+
+.products .media {
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+#payment-section a{
+    color: white;
+}

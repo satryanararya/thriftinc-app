@@ -1,0 +1,320 @@
+/* --------------------
+ *    PAGE SINGLE
+ * ----------------- */
+.button-cart input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    }
+.button-cart input[type=number] {
+    height: 3em;
+    width: 4em;
+    border: 1px solid #ff6b6b;
+    border-radius: 30px;
+    
+    }
+
+.mybtn {
+    background-color: #ff6b6b;
+    cursor: pointer;
+    color: white;
+    padding: 1em 3em;
+    border-radius: 30px;
+    width: 40%;
+}
+
+.black{
+    background-color: black;
+}
+.brown{
+    background-color: brown;
+}
+.white{
+    background-color: white;
+}
+.blue{
+    background-color: blue;
+}
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+/* BREADCRUMB */
+.breadcrumb {
+    font-size: var(--font-small);
+    margin-bottom: 2em;
+}
+.breadcrumb li:not(:last-child)::after {
+    content:'/';
+    padding: 0 0.35em;
+}
+
+.breadcrumb li:last-child {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--primary-color);
+}
+
+/* PRODUCTS DETAIL */
+.products.one .item {
+    flex-direction: column;
+}
+
+.products.one .price .discount {
+    font-size: 1em;
+    font-weight: var(--fw7);
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    padding: 1em;
+    z-index: 2;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border-radius: var(--percent50);
+    margin: 0.5em;
+}
+.products.one :where(.big-image, .small-image){
+    overflow: hidden;
+}
+.products.one :where(.big-image, .small-image) img{
+    object-fit: cover;
+    height: var(--percent100);
+    width: var(--percent100);
+    display: block;
+}
+.products.one .thumbnail-show {
+    position: relative;
+    width:130px;
+    height: 110px;
+    overflow: hidden;
+    margin: 0 2em 2em 0;
+}
+.products :is(.swiper-button-next, .swiper-button-prev) {
+    outline: 0;
+    color: red;
+    background-color: var(--border-color);
+    border-radius: var(--percent50);
+    padding: 1.5em;
+    transition: var(--trans-background), transform .3s;
+}
+
+.products.one :where(.swiper-button-next, .swiper-button-prev) {
+    top: var(--swiper-navigation-top-offset,37%);
+}
+
+.products .big-image:hover .swiper-button-next {
+    transform: translateX(30px);
+}
+.products .big-image:hover .swiper-button-prev {
+    transform: translateX(-30px);
+}
+.products :is(.swiper-button-next, .swiper-button-prev)::after {
+    font-size: 1.5em;
+}
+
+/* Product Description */
+.products.one .available {
+    font-size: var(--font-small);
+    font-weight: var(--fw5);
+    padding: 0.5em;
+    margin-right: 1em;
+    border-radius: 3px;
+    color: #10ac84;
+    background-color: var(--light-bg-color);
+}
+
+.products.one .add-review {
+    color: var(--dark-color);
+}
+
+.products.one .price{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.products.one .price .current {
+    font-size: 2.5em;
+}
+
+.products .variant form {
+    display: flex;
+    margin-top: 0.5em;
+}
+
+.products .variant form p {
+    position: relative;
+    margin: 0 0.5em 0.5em;
+}
+
+.products :where(.variant, .actions) .details_circle {
+    display: block;
+    position:static;
+    top: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1;
+    width: 2em;
+    height: 2em;
+    border-radius :50%;
+    border: 1px solid black;
+}
+.products :where(.variant, .actions) .details_circle.size {
+    display: block;
+    position:static;
+    top: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1;
+    width: 2em;
+    height: 2em;
+    border-radius :50%;
+    background-color: #f1f1f1;
+    border: 0;
+}
+.products :where(.variant, .actions) .details_circle.size span {
+    font-weight: bold;
+}
+
+.products .variant input {
+    clip: rect(0,0,0,0);
+    overflow: hidden;
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+.products .variant label::before {
+    opacity: 1;
+}
+
+.single-product .variant form p input:checked + label {
+    /* background-color: transparent; */
+    border: 2px solid var(--dark-color);
+}
+
+.products .sizes .variant .circle {
+    background-color: var(--border-color);
+}
+
+.products .sizes .variant label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--percent100);
+    height: var(--percent100);
+    font-size: 0.85em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products .actions {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+.products .qty-control {
+    width: fit-content;
+    padding: 0.5em;
+    border: 1px solid var(--border-color);
+    margin: 0 2em 2em 0;
+}
+
+.products .actions :where(input,button) {
+    font-size: 1em;
+    outline: 0;
+    border: 0;
+}
+
+.products .actions input {
+    /* width: 50px; */
+    text-align: center;
+}
+
+.products .button-cart .primary-button {
+    background-color: var(--primary-color);
+    padding: 1em 3em;
+    color: white;
+    cursor: pointer;
+}
+
+.products .qty-control button::before {
+    background-color: transparent;
+}
+
+.products .actions .button-cart {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* .products .actions .button-cart button {
+    width: var(--percent100);
+} */
+
+.wish-share a {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: var(--fw7);
+    margin: 1em 2em 1em 0;
+    transition: var(--trans-color);
+}
+
+/* Product Review */
+.products .collapse .has-child > a {
+    position: relative;
+    font-weight: var(--fw7);
+    text-transform: uppercase;
+    padding: 1em 1.25em;
+    border-top: 1px solid var(--border-color);
+}
+.products .collapse .has-child > a::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+}
+
+.products .collapse .content {
+    margin: 0 0 1.5em 2em;
+    font-size: var(--font-small);
+}
+
+.products .collapse .content li span:first-child {
+    min-width: 100px;
+    display: inline-flex;
+    font-weight: var(--fw7);
+    text-transform: uppercase;
+}
+
+.products .collapse table {
+    line-height: 3em;
+}
+.products .collapse table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--dark-color);
+}
+
+.products .collapse table :where(th,td) {
+    border: 1px solid var(--border-color);
+    padding-left: 2em;
+}
+
+.products .collapse .content {
+    display: none;
+}
+
+.products .collapse .expand .content {
+    display: flex;
+}
+.products .collapse .expand > a::before {
+    content: '-';
+}
